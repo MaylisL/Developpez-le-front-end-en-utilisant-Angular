@@ -1,3 +1,18 @@
-<h2>Olympic games app</h2>
-<hr />
-<p>{{ (olympics$ | async)?.length }} data loaded</p>
+<div *ngIf="olympics$ | async as olympics; else loading">
+  <h1 class="page-title">Medals per country</h1>
+  <div class="data-wrap">
+    <app-card statText="Number of JOs" [statNumber]="totalJo"></app-card>
+    <app-card statText="Number of Countries" [statNumber]="totalCountries"></app-card>
+  </div>
+  <div class="chart-wrap">
+    <canvas baseChart [data]="pieChartData" [type]="pieChartType" [options]="pieChartOptions"
+      (chartClick)="onChartClick($event, olympics)">
+    </canvas>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-container">
+    <p class="loading-text">Chargement...</p>
+  </div>
+</ng-template>
