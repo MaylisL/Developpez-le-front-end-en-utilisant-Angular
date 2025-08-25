@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    max-width: 1400px;
+    font-family: "Montserrat", sans-serif;
+    margin-inline: auto;
+    padding-inline: 8px;
+}
+
+canvas {
+    max-width: 500px;
+    max-height: 450px;
+}
+
+.chart-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.data-wrap {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.page-title {
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    padding-inline: 10px;
+    padding-block: 5px;
+    border: 1px solid #56abb3;
+    border-radius: 8px;
+    background-color: #00818d;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.message-wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+#detail-page {
+    .card-wrapper {
+        width: 260px;
+    }
+}
