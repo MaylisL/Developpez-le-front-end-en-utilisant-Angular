@@ -1,0 +1,19 @@
+<div *ngIf="country$ | async as country; else loading" id="detail-page">
+  <app-return-button route="/"></app-return-button>
+  <h2 class="page-title">{{ country.country }}</h2>
+  <div class="data-wrap">
+    <app-card statText="Number of entries" [statNumber]="totalParticipations"></app-card>
+    <app-card statText="Total number of medals" [statNumber]="totalMedals"></app-card>
+    <app-card statText="Total number of athletes" [statNumber]="totalAthletes"></app-card>
+  </div>
+  <div class="chart-wrap ">
+    <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" [type]="'line'">
+    </canvas>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading-container">
+    <p class="loading-text">Chargement...</p>
+  </div>
+</ng-template>
