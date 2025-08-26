@@ -40,14 +40,17 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 As you can see, an architecture has already been defined for the project. It is just a suggestion, you can choose to use your own. The predefined architecture includes (in addition to the default angular architecture) the following:
 
+```bash
 src/
-├── core/              # business logic  (`services` and `models` folders)
+├── core/              # business logic  (services and models folders)
 │   ├── models/        # TypeScript interfaces (Olympic, Participation, etc.) and Types
 │   └── services/      # services (OlympicService to load data)
 ├── components/        # contains every reusable components (CardComponent, RerturnButtonComponent, etc...)
 ├── pages/             # contains components used for routing (Home, Detail, ...)
-└── assets/            # static data (`olympic.json`)
+└── assets/            # static data (olympic.json)
+```
 
+### Advise
 I suggest you to start by understanding this starter code. Pay an extra attention to the `app-routing.module.ts` and the `olympic.service.ts`.
 
 Once mastered, you should continue by creating the typescript interfaces inside the `models` folder. As you can see I already created two files corresponding to the data included inside the `olympic.json`. With your interfaces, improve the code by replacing every `any` by the corresponding interface.
